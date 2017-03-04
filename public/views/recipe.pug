@@ -1,0 +1,10 @@
+div
+ section
+     h2(ng-bind="recipe.name")
+     p(ng-bind="recipe.description")
+      ul
+        li(ng-repeat="ingredient in recipe.ingredients", ng-bind="ingredient")
+      ol
+        li(ng-repeat="step in recipe.steps", ng-bind="step")
+
+      h3(ng-bind='id')

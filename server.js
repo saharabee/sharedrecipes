@@ -37,7 +37,12 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/api/recipes', recipes);
 
+app.get('views/*', function(req, res){
+    var viewUrl = 'views' + '\\public\\views\\' + req.param[0];
+    res.render( viewUrl);
+});
 
+app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

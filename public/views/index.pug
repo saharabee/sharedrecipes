@@ -1,0 +1,8 @@
+﻿div
+   dl(ng-repeat='recipe in recipes')
+      dt
+       a(href="views/recipe/{{recipe._id}}", ng-bind='recipe.name' )
+      dd(ng-bind='recipe.description')
+  
+     
+

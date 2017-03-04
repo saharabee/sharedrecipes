@@ -2,6 +2,30 @@
 html
   head
     title= title
+    link(rel='stylesheet', href="https://fonts.googleapis.com/css?family=Arima+Madurai|Hind+Madurai")
     link(rel='stylesheet', href='/stylesheets/main.css')
-  body
+  base(href='/'
+  )
+  body(ng-app='app')
+    header
+      h1 Shared Recipes
+    nav
+     ul
+      li(class="selected")
+        a(class='selected', href='index.html', text='home') Home
+
+  
     block content
+
+    script(type='text/javascript', src='/lib/jquery/dist/jquery.js')
+    script(type='text/javascript', src='/lib/angular/angular.js')
+    script(type='text/javascript', src='/lib/angular-resource/angular-resource.js')
+    script(type='text/javascript', src='/lib/angular-route/angular-route.js')
+    script(type='text/javascript', src='/app/app.js')
+
+    script(type='text/javascript', src= '/app/recipes/cachedRecipes.js')
+    script(type='text/javascript', src= '/app/recipes/Recipe.js')
+    script(type='text/javascript', src='/app/recipes/recipesListCtrl.js')
+    script(type='text/javascript', src='/app/recipes/recipeCtrl.js')
+
+    block scripts 
